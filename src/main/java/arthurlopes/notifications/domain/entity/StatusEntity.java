@@ -36,4 +36,23 @@ public class StatusEntity {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public enum Values {
+        PENDING(1L, "pending"),
+        SUCCESS(2L, "success"),
+        ERROR(3L, "error"),
+        CANCELED(4L, "canceled");
+
+        private Long id;
+        private String description;
+
+        Values(Long id, String description) {
+            this.id = id;
+            this.description = description;
+        }
+
+        public StatusEntity toStatus() {
+            return new StatusEntity(id, description);
+        }
+    }
 }
