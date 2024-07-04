@@ -12,6 +12,14 @@ public class NotificationEntity {
     public NotificationEntity() {
     }
 
+    public NotificationEntity(LocalDateTime dateTime, String destination, String message, ChannelEntity channel, StatusEntity status) {
+        this.dateTime = dateTime;
+        this.destination = destination;
+        this.message = message;
+        this.channel = channel;
+        this.status = status;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long notificationId;
