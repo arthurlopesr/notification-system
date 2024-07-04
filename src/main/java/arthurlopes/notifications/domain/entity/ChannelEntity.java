@@ -9,6 +9,11 @@ public class ChannelEntity {
     public ChannelEntity() {
     }
 
+    public ChannelEntity(Long channelId, String description) {
+        this.channelId = channelId;
+        this.description = description;
+    }
+
     @Id
     private Long channelId;
 

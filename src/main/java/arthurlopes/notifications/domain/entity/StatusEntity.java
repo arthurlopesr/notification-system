@@ -7,8 +7,13 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "status")
 public class StatusEntity {
-    
+
     public StatusEntity() {
+    }
+
+    public StatusEntity(Long statusId, String description) {
+        this.statusId = statusId;
+        this.description = description;
     }
 
     @Id
